@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Melhores Autos do Vale — oportunidades em Volkswagen zero km em Taubaté e região.">
+  <title>Melhores Autos do Vale | Volkswagen Zero Km</title>
+  <style>
+    :root{--navy:#071a35;--blue:#0757b8;--blue2:#1478e8;--sky:#eaf4ff;--ink:#12233d;--muted:#64748b;--white:#fff}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,Arial,Helvetica,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1160px, calc(100% - 40px));margin:auto}
+    header{position:absolute;z-index:5;top:0;left:0;width:100%;color:#fff;border-bottom:1px solid #ffffff26}
+    .nav{height:86px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:-.5px;line-height:1.05}
+    .brand-mark{width:43px;height:43px;border:2px solid #fff;border-radius:50%;display:grid;place-items:center;font-size:13px;font-weight:900;letter-spacing:-1px}
+    .brand small{display:block;font-size:10px;letter-spacing:2px;font-weight:600;opacity:.75;margin-top:5px}
+    .navlinks{display:flex;align-items:center;gap:30px;font-size:13px;font-weight:650;color:#e5efff}
+    .navlinks a:hover{color:#8dc5ff}
+    .nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:7px;padding:13px 20px;font-weight:750;font-size:13px;transition:.2s}
+    .nav-cta{background:#fff;color:var(--navy)}
+    .nav-cta:hover{background:#dceeff;transform:translateY(-2px)}
+    .hero{min-height:740px;display:flex;align-items:center;position:relative;overflow:hidden;color:#fff;background:radial-gradient(ellipse at 78% 47%,#176bc0 0%,#0b3c79 35%,#071a35 74%)}
+    .hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#06172ff2 0%,#071a35d9 42%,#071a3540 100%);z-index:1}
+    .hero:after{content:"";position:absolute;width:680px;height:680px;border:1px solid #ffffff18;border-radius:50%;right:-90px;top:80px;box-shadow:0 0 0 55px #ffffff08,0 0 0 110px #ffffff05}
+    .hero-art{position:absolute;right:-2%;bottom:5%;width:62%;max-width:850px;z-index:0;opacity:.92;filter:drop-shadow(0 35px 35px #0008)}
+    .hero-content{position:relative;z-index:2;padding:150px 0 110px;max-width:650px}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;text-transform:uppercase;letter-spacing:2.4px;font-size:10px;font-weight:800;color:#9acbff;margin-bottom:22px}
+    .eyebrow:before{content:"";width:27px;height:2px;background:#55aaff}
+    h1{font-size:clamp(42px,6vw,76px);line-height:1.02;letter-spacing:-3.5px;font-weight:850;margin-bottom:24px}
+    h1 span{color:#72b8ff}
+    .hero p{font-size:17px;line-height:1.8;color:#d8e8fb;max-width:540px;margin-bottom:32px}
+    .actions{display:flex;flex-wrap:wrap;gap:13px}
+    .btn-primary{background:#1680ee;color:#fff;box-shadow:0 12px 28px #0067d34a}
+    .btn-primary:hover{background:#3295ff;transform:translateY(-2px)}
+    .btn-outline{border:1px solid #ffffff70;color:#fff;background:#ffffff0b}
+    .btn-outline:hover{background:#ffffff1b}
+    .hero-note{margin-top:42px;display:flex;align-items:center;gap:13px;color:#c4d8ee;font-size:12px}
+    .hero-note strong{color:#fff}
+    .dot{width:7px;height:7px;background:#62bdff;border-radius:50%;box-shadow:0 0 0 5px #62bdff20}
+
+    .section{padding:100px 0}
+    .section-head{text-align:center;max-width:680px;margin:0 auto 52px}
+    .kicker{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--blue);font-weight:850;margin-bottom:12px}
+    h2{font-size:clamp(30px,4vw,46px);line-height:1.12;letter-spacing:-1.8px;color:var(--navy);margin-bottom:16px}
+    .section-head p{color:var(--muted);font-size:15px}
+    .benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .benefit{padding:30px 28px;border:1px solid #e5edf7;border-radius:12px;background:#fff;box-shadow:0 12px 35px #0b32600a}
+    .icon{height:48px;width:48px;border-radius:10px;background:var(--sky);color:var(--blue);display:grid;place-items:center;margin-bottom:22px}
+    .icon svg{width:24px;height:24px}
+    .benefit h3{font-size:18px;color:var(--navy);margin-bottom:9px}
+    .benefit p{font-size:13px;color:var(--muted);line-height:1.75}
+    .statement{background:linear-gradient(120deg,#071a35,#0c4384);color:#fff;padding:76px 0;position:relative;overflow:hidden}
+    .statement:after{content:"VW";position:absolute;right:7%;top:50%;transform:translateY(-50%);font-size:190px;font-weight:900;letter-spacing:-18px;color:#ffffff0b}
+    .statement-inner{position:relative;z-index:1;max-width:760px}
+    .statement .kicker{color:#8fc7ff}
+    .statement h2{color:#fff}
+    .statement p{color:#d5e6f8;font-size:16px;max-width:680px;line-height:1.9}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start}
+    .contact-copy p{color:var(--muted);margin:16px 0 27px;max-width:480px}
+    .contact-list{display:grid;gap:17px}
+    .contact-item{display:flex;gap:14px;align-items:flex-start}
+    .contact-item .icon{flex:0 0 43px;width:43px;height:43px;margin:0}
+    .contact-item strong{display:block;font-size:14px;color:var(--navy);margin:1px 0 3px}
+    .contact-item span,.contact-item a{font-size:13px;color:var(--muted)}
+    .contact-card{border-radius:14px;padding:34px;background:var(--sky);border:1px solid #d9eaff}
+    .contact-card h3{font-size:22px;color:var(--navy);margin-bottom:8px}
+    .contact-card p{font-size:13px;color:var(--muted);margin-bottom:22px}
+    .contact-card .btn{width:100%;margin-bottom:12px}
+    .facebook{background:#fff;color:#174d91;border:1px solid #d5e5f8}
+    footer{background:#06152b;color:#a9bdd4;padding:28px 0;font-size:12px}
+    .footer-inner{display:flex;justify-content:space-between;gap:20px;align-items:center}
+    .footer-brand{font-weight:800;color:#fff;letter-spacing:.2px}
+    .top{position:fixed;bottom:22px;right:22px;width:44px;height:44px;border-radius:50%;background:#0c65c6;color:#fff;display:grid;place-items:center;box-shadow:0 8px 22px #06152b40;z-index:10;font-size:20px}
+    @media(max-width:800px){.navlinks{display:none}.hero{min-height:690px}.hero-art{width:100%;right:-25%;bottom:2%;opacity:.42}.hero:before{background:linear-gradient(90deg,#06172ff5,#071a35c9)}.hero-content{padding:145px 0 95px}.benefits{grid-template-columns:1fr}.contact-grid{grid-template-columns:1fr;gap:35px}.section{padding:76px 0}.statement:after{right:-10%;font-size:140px}}
+    @media(max-width:480px){.container{width:min(100% - 30px,1160px)}.nav{height:74px}.brand{font-size:13px}.brand-mark{width:38px;height:38px}.hero{min-height:670px}h1{letter-spacing:-2px}.hero p{font-size:15px}.actions .btn{width:100%}.footer-inner{align-items:flex-start;flex-direction:column}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#inicio" aria-label="Melhores Autos do Vale - início">
+        <span class="brand-mark">VW</span>
+        <span>MELHORES AUTOS<small>DO VALE</small></span>
+      </a>
+      <nav class="navlinks" aria-label="Navegação principal">
+        <a href="#sobre">Sobre nós</a><a href="#vantagens">Vantagens</a><a href="#contato">Contato</a>
+      </nav>
+      <a class="nav-cta" href="https://wa.me/5512992359221" target="_blank" rel="noopener">Fale com um consultor ↗</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <svg class="hero-art" viewBox="0 0 900 420" role="img" aria-label="Ilustração estilizada de um automóvel moderno">
+        <defs>
+          <linearGradient id="carBody" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#f8fbff"/><stop offset=".48" stop-color="#b8d5f1"/><stop offset="1" stop-color="#4e83b9"/></linearGradient>
+          <linearGradient id="glass" x1="0" x2="1"><stop stop-color="#173b62"/><stop offset="1" stop-color="#07182c"/></linearGradient>
+        </defs>
+        <ellipse cx="475" cy="354" rx="390" ry="34" fill="#020b18" opacity=".55"/>
+        <path d="M105 277 L145 230 Q171 211 244 199 L345 111 Q374 88 426 87 L602 88 Q645 90 681 128 L766 216 Q817 231 836 263 L839 307 Q835 328 807 331 L117 331 Q91 323 91 300 Z" fill="url(#carBody)" stroke="#d8eaff" stroke-width="5"/>
+        <path d="M265 193 L365 116 Q382 103 422 103 L478 103 L478 195 Z" fill="url(#glass)" stroke="#8db7df" stroke-width="4"/>
+        <path d="M493 103 L595 104 Q625 107 650 137 L704 195 L493 195 Z" fill="url(#glass)" stroke="#8db7df" stroke-width="4"/>
+        <path d="M486 103 L486 197" stroke="#7ea9d1" stroke-width="5"/>
+        <path d="M121 266 Q165 246 211 245 L755 245 Q803 246 827 270" fill="none" stroke="#fff" stroke-width="7" opacity=".65"/>
+        <path d="M105 280 L175 278 L195 299 L112 302 Z" fill="#f7fbff"/><path d="M758 275 L827 270 L826 296 L765 299 Z" fill="#ff5f65"/>
+        <circle cx="250" cy="318" r="57" fill="#08182a"/><circle cx="250" cy="318" r="31" fill="#9bb5cd"/><circle cx="250" cy="318" r="15" fill="#294b6e"/>
+        <circle cx="690" cy="318" r="57" fill="#08182a"/><circle cx="690" cy="318" r="31" fill="#9bb5cd"/><circle cx="690" cy="318" r="15" fill="#294b6e"/>
+        <path d="M183 222 L263 216 M721 222 L775 235" stroke="#fff" stroke-width="4" opacity=".5"/>
+      </svg>
+      <div class="container">
+        <div class="hero-content">
+          <div class="eyebrow">Volkswagen zero km · Taubaté e região</div>
+          <h1>Seu próximo Volkswagen começa <span>aqui.</span></h1>
+          <p>As melhores oportunidades em veículos Volkswagen zero quilômetro, com atendimento próximo e orientação para você fazer uma ótima escolha.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="https://wa.me/5512992359221?text=Ol%C3%A1!%20Quero%20conhecer%20as%20oportunidades%20Volkswagen%20zero%20km." target="_blank" rel="noopener">Consultar oportunidades <span>↗</span></a>
+            <a class="btn btn-outline" href="#sobre">Conheça a Melhores Autos</a>
+          </div>
+          <div class="hero-note"><span class="dot"></span><span><strong>Atendimento em Taubaté</strong> · Av. Itália, Jardim das Nações</span></div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="section" id="vantagens">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Uma escolha inteligente</div>
+          <h2>Mais facilidade para chegar ao seu Volkswagen.</h2>
+          <p>Conte com um atendimento dedicado para conhecer as oportunidades e encontrar a opção que combina com você.</p>
+        </div>
+        <div class="benefits">
+          <article class="benefit">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12h18M5 12l2-6h10l2 6M5 12v5h14v-5M8 17v2m8-2v2M7 15h.01M17 15h.01"/></svg></div>
+            <h3>Especialistas em Volkswagen</h3>
+            <p>Foco em veículos Volkswagen zero quilômetro e nas oportunidades da marca.</p>
+          </article>
+          <article class="benefit">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v18M17 7H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+            <h3>Condições para sua compra</h3>
+            <p>Consulte preços e condições disponíveis para encontrar a oportunidade ideal.</p>
+          </article>
+          <article class="benefit">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 11.5a8.4 8.4 0 0 1-12.4 7.4L4 20l1.1-3.5A8.5 8.5 0 1 1 20 11.5Z"/><path d="M8.5 9.5c.8 2 2 3.2 4 4"/></svg></div>
+            <h3>Atendimento próximo</h3>
+            <p>Fale diretamente com um consultor e tire suas dúvidas pelo WhatsApp.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="statement" id="sobre">
+      <div class="container">
+        <div class="statement-inner">
+          <div class="kicker">Melhores Autos do Vale</div>
+          <h2>Boas oportunidades. Compra com mais confiança.</h2>
+          <p>Nosso objetivo é trazer as melhores oportunidades em veículo Volkswagen zero km. Aqui você tem os melhores preços e faz sua compra direto com a fábrica. Entre em contato para consultar os modelos, valores e condições disponíveis.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contato">
+      <div class="container contact-grid">
+        <div class="contact-copy">
+          <div class="kicker">Estamos por aqui</div>
+          <h2>Vamos encontrar seu próximo carro?</h2>
+          <p>Converse com a nossa equipe, consulte as oportunidades e receba atendimento em Taubaté.</p>
+          <div class="contact-list">
+            <div class="contact-item">
+              <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+              <div><strong>Endereço</strong><span>Av. Itália, nº 1.300 — Jardim das Nações<br>Taubaté — SP, 12030-212</span></div>
+            </div>
+            <div class="contact-item">
+              <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 16.5v3a1.5 1.5 0 0 1-1.7 1.5A18.5 18.5 0 0 1 3 4.7 1.5 1.5 0 0 1 4.5 3h3a1.5 1.5 0 0 1 1.5 1.3c.1 1 .4 2 .7 2.9a1.5 1.5 0 0 1-.3 1.6L8.1 10a15 15 0 0 0 5.9 5.9l1.2-1.3a1.5 1.5 0 0 1 1.6-.3c.9.3 1.9.6 2.9.7a1.5 1.5 0 0 1 1.3 1.5Z"/></svg></div>
+              <div><strong>WhatsApp</strong><a href="https://wa.me/5512992359221" target="_blank" rel="noopener">(12) 99235-9221</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-card">
+          <h3>Fale com um consultor</h3>
+          <p>Envie uma mensagem e saiba mais sobre as oportunidades disponíveis.</p>
+          <a class="btn btn-primary" href="https://wa.me/5512992359221?text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20Volkswagen%20zero%20km." target="_blank" rel="noopener">Chamar no WhatsApp ↗</a>
+          <a class="btn facebook" href="https://www.facebook.com/elitonconsultorautomotivo/?ref=pages_you_manage&_rdc=1&_rdr#" target="_blank" rel="noopener">Acompanhar no Facebook ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-brand">MELHORES AUTOS DO VALE</div>
+      <div>Taubaté — SP · Volkswagen Zero Km</div>
+      <div>© <span id="year"></span> Melhores Autos do Vale</div>
+    </div>
+  </footer>
+  <a class="top" href="#inicio" aria-label="Voltar ao topo">↑</a>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
